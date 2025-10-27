@@ -96,6 +96,3 @@ Campos:
 | `npm install @auth0/angular-jwt`         | Instala biblioteca para integrar **JWT** no Angular e interceptar requisições autenticadas. |
 
 ---
-Perfeito — aqui está a versão atualizada **já pronta para colar no README.md**, com a instalação do Angular CLI incluída no bloco do frontend.
-
----
