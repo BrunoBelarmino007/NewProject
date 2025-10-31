@@ -83,6 +83,7 @@ Campos:
 | `npx sequelize-cli init`| Cria a estrutura inicial do Sequelize (`models`, `migrations`, `seeders`, `config`).|
 | `npx sequelize-cli model:generate --name User --attributes name:string,email:string,password:string` | Gera automaticamente o **model** e a **migration** do usuário (**User**) com os campos `name`, `email` e `password`. <br>O Sequelize cria os arquivos necessários em `models/` e `migrations/`, permitindo editar e ajustar os tipos de dados e validações antes de executar as migrations.|
 | `npx sequelize-cli model:generate --name Post --attributes user_id:integer,title:string,text:text,summary:string,available_at:date` | Gera automaticamente o **model** e a **migration** da tabela `Post` com os campos `user_id`, `title`, `text`, `summary` e `available_at`. Facilita a criação de tabelas no banco e garante que o model esteja pronto para relacionamentos e manipulação via Sequelize. |
+| `npx sequelize-cli model:generate --name PostLike --attributes user_id:integer,post_id:integer` | Gera um **model** e uma **migration** chamada `PostLike` com os atributos `user_id` e `post_id`. Esse model representa a tabela que registra os likes dos usuários nos posts, permitindo relacionar cada usuário a cada post que ele curtiu. |
 
 
 ---
