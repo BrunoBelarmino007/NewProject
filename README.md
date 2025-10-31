@@ -76,11 +76,13 @@ Campos:
 
 | Comando                                                                          | Para que serve                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `cd backend`                                                                     | Acessa a pasta do backend para instalar dependências e configurar o servidor.                                                                                                                                                                                                                                                                                                                                                                              |
-| `npm init -y`                                                                    | Inicializa o projeto Node criando o arquivo `package.json` com configurações padrão.                                                                                                                                                                                                                                                                                                                                                                       |
+| `cd backend` | Acessa a pasta do backend para instalar dependências e configurar o servidor.|
+| `npm init -y` | Inicializa o projeto Node criando o arquivo `package.json` com configurações padrão.|
 | `npm install express cors dotenv yup jsonwebtoken bcrypt sequelize pg pg-hstore` | Instala as dependências de produção do backend:<br>• **express**: framework para criar API<br>• **cors**: libera acesso entre domínios (Angular ↔ Node)<br>• **dotenv**: gerenciar variáveis de ambiente (`.env`)<br>• **yup**: validação de requisições<br>• **jsonwebtoken (JWT)**: autenticação por token<br>• **bcrypt**: criptografar senhas<br>• **sequelize**: ORM de acesso ao banco<br>• **pg / pg-hstore**: drivers do PostgreSQL para Sequelize |
-| `npm install --save-dev sequelize-cli nodemon`                                   | Instala dependências de desenvolvimento:<br>• **sequelize-cli**: cria models, migrations e seeds<br>• **nodemon**: reinicia o servidor automaticamente ao salvar arquivos                                                                                                                                                                                                                                                                                  |
-| `npx sequelize-cli init`                                                         | Cria a estrutura inicial do Sequelize (`models`, `migrations`, `seeders`, `config`).                                                                                                                                                                                                                                                                                                                                                                       |
+| `npm install --save-dev sequelize-cli nodemon`| Instala dependências de desenvolvimento:<br>• **sequelize-cli**: cria models, migrations e seeds<br>• **nodemon**: reinicia o servidor automaticamente ao salvar arquivos|
+| `npx sequelize-cli init`| Cria a estrutura inicial do Sequelize (`models`, `migrations`, `seeders`, `config`).|
+| `npx sequelize-cli model:generate --name User --attributes name:string,email:string,password:string` | Gera automaticamente o **model** e a **migration** do usuário (**User**) com os campos `name`, `email` e `password`. <br>O Sequelize cria os arquivos necessários em `src/models/` e `src/migrations/`, permitindo editar e ajustar os tipos de dados e validações antes de executar as migrations.|
+
 
 ---
 
@@ -88,11 +90,9 @@ Campos:
 
 | Comando                                  | Para que serve                                                                              |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `npm install -g @angular/cli`            | Instala o **Angular CLI** globalmente, permitindo criar e gerenciar projetos Angular via terminal. |
-| `ng new frontend --routing --style=scss` | Cria o projeto Angular com sistema de rotas habilitado e utilizando **SCSS** para estilização.     |
-| `cd frontend`                            | Entra na pasta do frontend para instalar libs e criar componentes.                                 |
-| `ng new frontend --routing --style=scss` | Cria o projeto Angular com sistema de rotas e configuração para utilizar **SCSS**.          |
-| `cd frontend`                            | Entra na pasta do frontend para instalar libs e criar componentes.                          |
-| `npm install @auth0/angular-jwt`         | Instala biblioteca para integrar **JWT** no Angular e interceptar requisições autenticadas. |
+| `npm install -g @angular/cli` | Instala o **Angular CLI** globalmente, permitindo criar e gerenciar projetos Angular via terminal. |
+| `ng new frontend --routing --style=scss` | Cria o projeto Angular com sistema de rotas habilitado e utilizando **SCSS** para estilização. |
+| `cd frontend`| Entra na pasta do frontend para instalar libs e criar componentes.                                 |
+| `npm install @auth0/angular-jwt`| Instala biblioteca para integrar **JWT** no Angular e interceptar requisições autenticadas. |
 
 ---
