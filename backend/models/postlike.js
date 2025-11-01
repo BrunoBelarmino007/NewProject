@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'PostLike',
-      tableName: 'post_likes',
+      tableName: 'PostLikes',
       indexes: [
         {
           unique: true,

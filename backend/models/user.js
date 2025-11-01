@@ -1,7 +1,7 @@
 'use strict';
 
 const { Model } = require('sequelize');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 
 module.exports = (sequelize, DataTypes) => {
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'User',
-      tableName: 'users',
+      tableName: 'Users',
       hooks: {
         // Hook para criptografar senha antes de salvar
         beforeSave: async (user) => {
