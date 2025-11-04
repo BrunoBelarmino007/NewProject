@@ -58,7 +58,7 @@ class PostController {
     }
   }
 
-  async store(req, res) {
+  async createPost(req, res) {
     try {
       const post = await Post.create({
         ...req.body,

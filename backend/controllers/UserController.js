@@ -2,7 +2,7 @@ const { User } = require('../models');
 const jwt = require('jsonwebtoken');
 
 class UserController {
-  async store(req, res) {
+  async createUser(req, res) {
     try {
       const { email } = req.body;
 

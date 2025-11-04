@@ -1,23 +1,14 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "1234",
-    "database": "project",
-    "host": "127.0.0.1",
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres"
   },
   "test": {
-    "username": "postgres",
-    "password": "1234",
-    "database": "project_test",
-    "host": "127.0.0.1",
+    "use_env_variable": "DATABASE_URL_TEST",
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": "1234",
-    "database": "project_prod",
-    "host": "127.0.0.1",
+    "use_env_variable": "DATABASE_URL_PROD",
     "dialect": "postgres"
   }
 }

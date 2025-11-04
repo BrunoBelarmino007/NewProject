@@ -98,3 +98,5 @@ Campos:
 | `npm install @auth0/angular-jwt`| Instala biblioteca para integrar **JWT** no Angular e interceptar requisições autenticadas. |
 
 ---
+
+Execute `npx sequelize-cli db:migrate` para aplicar as mudanças sem perder dados 

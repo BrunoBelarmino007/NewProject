@@ -34,6 +34,8 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
       modelName: 'PostLike',
       tableName: 'PostLikes',
+      timestamps: true,
+      underscored: true,
       indexes: [
         {
           unique: true,

@@ -37,6 +37,8 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
       modelName: 'User',
       tableName: 'Users',
+      timestamps: true,
+      underscored: true,
       hooks: {
         // Hook para criptografar senha antes de salvar
         beforeSave: async (user) => {

@@ -1,7 +1,7 @@
 const yup = require('yup');
 
 class UserValidator {
-  async store(req, res, next) {
+  async validateCreateUser(req, res, next) {
     const schema = yup.object().shape({
       name: yup.string().required('Nome é obrigatório'),
       email: yup.string().email('Email inválido').required('Email é obrigatório'),
@@ -20,7 +20,7 @@ class UserValidator {
     }
   }
 
-  async authenticate(req, res, next) {
+  async validateAuthenticate(req, res, next) {
     const schema = yup.object().shape({
       email: yup.string().email('Email inválido').required('Email é obrigatório'),
       password: yup.string().required('Senha é obrigatória'),

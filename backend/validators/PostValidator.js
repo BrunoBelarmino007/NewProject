@@ -1,7 +1,7 @@
 const yup = require('yup');
 
 class PostValidator {
-  async store(req, res, next) {
+  async validateCreate(req, res, next) {
     const schema = yup.object().shape({
       title: yup.string().required('Título é obrigatório'),
       text: yup.string().required('Texto é obrigatório'),
@@ -20,7 +20,7 @@ class PostValidator {
     }
   }
 
-  async update(req, res, next) {
+  async validateUpdate(req, res, next) {
     const schema = yup.object().shape({
       title: yup.string(),
       text: yup.string(),
