@@ -67,7 +67,11 @@ class PostController {
 
       return res.status(201).json(post);
     } catch (error) {
-      return res.status(500).json({ error: 'Erro ao criar post' });
+        console.error('ERRO AO CRIAR POST:', error);
+        return res.status(500).json({
+          error: 'Erro ao criar post',
+          details: error.message
+        });
     }
   }
 
@@ -111,7 +115,11 @@ class PostController {
 
       await post.destroy();
 
-      return res.status(204).send();
+    return res.status(200).json({
+      message: 'Post removido com sucesso',
+      postId: id
+    });
+
     } catch (error) {
       return res.status(500).json({ error: 'Erro ao remover post' });
     }
